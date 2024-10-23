@@ -38,7 +38,7 @@ public interface OgrenciRepository extends JpaRepository<Ogrenci, Long> {
 
     // Öğrencileri adına göre sıralayınız (alfabetik)
     String QUESTION_6 = "SELECT * FROM ogrenci " +
-            "ORDER BY ad COLLATE \"tr_TR.UTF-8\"";
+            "ORDER BY ad";
     @Query(value = QUESTION_6, nativeQuery = true)
     List<Ogrenci> findStudentsAlphabetically();
 
